@@ -1,5 +1,5 @@
 {% set name = "chemex" %}
-{% set version = "2018.9.1" %}
+{% set version = "2018.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/gbouvignies/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 15f868d62143ffc9ee29d799e5f5edd3cd1517e046721347b83836b86af8b9d7
+  sha256: fc8155586764ee5681d1355f5ca1fc06cf29f0aa368ce2ae0fd51bd23e56e450
 
 build:
   noarch: python
