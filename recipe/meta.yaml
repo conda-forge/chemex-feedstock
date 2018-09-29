@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/gbouvignies/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: f06006fb9a6ee96df6dc256990b56f1f42750be347b153ea050d2df5002f0a62
+  sha256: 5bff9319309ab465029adc9f7e15f7ab4961b5c92fa76f03b37707554ccf4f75
 
 build:
   noarch: python
