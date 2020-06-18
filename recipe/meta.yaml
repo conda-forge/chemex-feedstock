@@ -17,12 +17,14 @@ build:
     - chemex = chemex.chemex:main
 
 requirements:
+  build:
+    - setuptools_scm
   host:
-    - python>=3.5
+    - python >=3.5
     - setuptools
     - pip
   run:
-    - python>=3.5
+    - python >=3.5
     - numpy
     - scipy
     - matplotlib-base
