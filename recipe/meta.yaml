@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - chemex = chemex.chemex:main
@@ -19,7 +19,6 @@ build:
 requirements:
   host:
     - python >=3.5
-    - setuptools
     - setuptools_scm
     - pip
   run:
