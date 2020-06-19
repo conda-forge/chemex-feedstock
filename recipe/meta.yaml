@@ -6,13 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/gbouvignies/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 8213b9340b56f9289fb5b526638d320babd0034c36be2c8dc42f5961cd61452f
 
 build:
   noarch: python
   number: 1
-  skip: True  # [py<35]
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - chemex = chemex.chemex:main
