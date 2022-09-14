@@ -20,6 +20,7 @@ requirements:
   host:
     - python >=3.6,<3.11
     - pip
+    - poetry-core
   run:
     - python >=3.6,<3.11
     - cachetools >=5.2.0,<6.0.0
