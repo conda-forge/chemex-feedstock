@@ -45,7 +45,7 @@ test:
 about:
   home: http://gbouvignies.github.io/ChemEx/
   summary: ChemEx is an analysis program for chemical exchange detected by NMR
-  license: GPL-3.0
+  license: GPL-3.0-only
   license_file:
     - LICENSE.md
 
