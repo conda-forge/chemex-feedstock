@@ -1,5 +1,5 @@
 {% set name = "chemex" %}
-{% set version = "2022.3.4" %}
+{% set version = "2022.3.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/chemex-{{ version }}.tar.gz
-  sha256: 8829999fc9cdf0c553b938e2722ce76bf8dfff01eda19ecb1bc561798d5a57ce
+  sha256: 74bcc32b4d6d2d9e80e2ee0ae74fbb98dbac1f7890081d0a02b33568c53cc543
 
 build:
   entry_points:
