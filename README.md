@@ -5,9 +5,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/chemex-feedstoc
 
 Home: http://gbouvignies.github.io/ChemEx/
 
-Package license: GPL-3.0-only
+Package license: GPL-3.0-or-later
 
-Summary: ChemEx is an analysis program for chemical exchange detected by NMR
+Summary: An analysis program for chemical exchange detected by NMR
 
 Current build status
 ====================
