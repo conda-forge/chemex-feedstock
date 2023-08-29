@@ -1,5 +1,5 @@
 {% set name = "chemex" %}
-{% set version = "2022.3.5" %}
+{% set version = "2022.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/chemex-{{ version }}.tar.gz
-  sha256: 74bcc32b4d6d2d9e80e2ee0ae74fbb98dbac1f7890081d0a02b33568c53cc543
+  sha256: 1274e9a2018e3dbee1e5ccb2fff9173f92f4adfd88ffd47fc3a39c0f1e98cbae
 
 build:
   entry_points:
@@ -18,20 +18,20 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<3.11
+    - python >=3.10
+    - pdm-backend
     - pip
-    - poetry-core
   run:
-    - python >=3.9,<3.11
-    - cachetools
-    - lmfit
-    - matplotlib-base
-    - numpy
-    - pydantic
-    - rapidfuzz
-    - rich
-    - scipy
-    - tomli
+    - python >=3.10
+    - numpy >=1.25.0
+    - scipy >=1.9.3
+    - matplotlib-base >=3.7.1
+    - lmfit >=1.2.1
+    - pydantic >=2.0.1
+    - cachetools >=5.3.1
+    - rich >=13.4.2
+    - tomli >=2.0.1
+    - rapidfuzz >=3.1.1
 
 test:
   imports:
@@ -44,10 +44,9 @@ test:
 
 about:
   home: http://gbouvignies.github.io/ChemEx/
-  summary: ChemEx is an analysis program for chemical exchange detected by NMR
-  license: GPL-3.0-only
-  license_file:
-    - LICENSE.md
+  summary: An analysis program for chemical exchange detected by NMR
+  license: GPL-3.0-or-later
+  license_file: LICENSE.md
 
 extra:
   recipe-maintainers:
