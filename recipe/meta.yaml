@@ -43,8 +43,9 @@ test:
     - pip
 
 about:
+  home: http://gbouvignies.github.io/ChemEx/
   summary: An analysis program for chemical exchange detected by NMR
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_file: LICENSE.md
 
 extra:
