@@ -1,5 +1,5 @@
 {% set name = "chemex" %}
-{% set version = "2022.3.6" %}
+{% set version = "2023.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/chemex-{{ version }}.tar.gz
-  sha256: 1274e9a2018e3dbee1e5ccb2fff9173f92f4adfd88ffd47fc3a39c0f1e98cbae
+  sha256: 91a4e9f4133a74bc50fec793a3980c1dfbfda292e7875504b6f62d13f2e29faf
 
 build:
   entry_points:
@@ -18,20 +18,21 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python >=3.10,<3.13
     - pdm-backend
     - pip
   run:
-    - python >=3.10
-    - numpy >=1.25.0
-    - scipy >=1.9.3
-    - matplotlib-base >=3.7.1
-    - lmfit >=1.2.1
-    - pydantic >=2.0.1
-    - cachetools >=5.3.1
-    - rich >=13.4.2
+    - python >=3.10,<3.13
+    - numpy >=1.26.1
+    - scipy >=1.11.3
+    - matplotlib-base >=3.8.0
+    - lmfit >=1.2.2
+    - pydantic >=2.4.2
+    - cachetools >=5.3.2
+    - rich >=13.6.0
     - tomli >=2.0.1
-    - rapidfuzz >=3.1.1
+    - rapidfuzz >=3.4.0
+    - emcee >=3.1.4
 
 test:
   imports:
