@@ -13,16 +13,16 @@ build:
   entry_points:
     - chemex = chemex.chemex:main
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.10,<3.13
+    - python >=3.11,<3.13
     - pdm-backend
     - pip
   run:
-    - python >=3.10,<3.13
+    - python >=3.11,<3.13
     - numpy >=1.26.1
     - scipy >=1.11.3
     - matplotlib-base >=3.8.0
@@ -30,9 +30,10 @@ requirements:
     - pydantic >=2.4.2
     - cachetools >=5.3.2
     - rich >=13.6.0
-    - tomli >=2.0.1
     - rapidfuzz >=3.4.0
     - emcee >=3.1.4
+    - numdifftools >=0.9.41
+    - annotated-types >=0.6.0
 
 test:
   imports:
@@ -46,7 +47,7 @@ test:
 about:
   home: http://gbouvignies.github.io/ChemEx/
   summary: An analysis program for chemical exchange detected by NMR
-  license: GPL-3.0-or-later
+  license: GPL-3.0
   license_file: LICENSE.md
 
 extra:
