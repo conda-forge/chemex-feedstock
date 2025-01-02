@@ -1,3 +1,4 @@
+{% set python_min = '3.11' %}
 {% set name = "chemex" %}
 {% set version = "2024.9.25" %}
 
@@ -6,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/chemex-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/chemex-{{ version }}.tar.gz
   sha256: a06f1fc8a4f7cb6a16ff368071fba2d391b1407a1ccf0d54318ea7ba1836278e
 
 build:
@@ -14,15 +15,15 @@ build:
     - chemex = chemex.chemex:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.11,<3.13
+    - python {{ python_min }}
     - pdm-backend
     - pip
   run:
-    - python >=3.11,<3.13
+    - python >={{ python_min }},<3.13
     - numpy >=1.26.1
     - scipy >=1.11.3
     - matplotlib-base >=3.8.0
@@ -43,6 +44,7 @@ test:
     - chemex --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: http://gbouvignies.github.io/ChemEx/
