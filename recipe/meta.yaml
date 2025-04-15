@@ -1,6 +1,6 @@
-{% set python_min = '3.11' %}
+{% set python_min = "3.11" %}
 {% set name = "chemex" %}
-{% set version = "2024.9.25" %}
+{% set version = "2025.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/chemex-{{ version }}.tar.gz
-  sha256: a06f1fc8a4f7cb6a16ff368071fba2d391b1407a1ccf0d54318ea7ba1836278e
+  sha256: a55618f2eafc3dd933ef9f4db21eeccb4c5aa0f5f6c09d14a2948d8a06978382
 
 build:
   entry_points:
     - chemex = chemex.chemex:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
