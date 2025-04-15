@@ -48,6 +48,8 @@ about:
   summary: An analysis program for chemical exchange detected by NMR
   license: GPL-3.0-only
   license_file: LICENSE.md
+  home: https://github.com/gbouvignies/ChemEx
+  documentation: https://gbouvignies.github.io/ChemEx/docs/welcome_to_chemex
 
 extra:
   recipe-maintainers:
