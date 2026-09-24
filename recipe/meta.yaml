@@ -1,13 +1,13 @@
 {% set name = "chemex" %}
-{% set version = "2025.4.0" %}
+{% set version = "2026.9.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/chemex-{{ version }}.tar.gz
-  sha256: a55618f2eafc3dd933ef9f4db21eeccb4c5aa0f5f6c09d14a2948d8a06978382
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/chemex-{{ version }}.tar.gz
+  sha256: 906695dafa9276ca0f3386cf07ab12373dedc899ebc073b42874e5584b6d4bb1
 
 build:
   entry_points:
@@ -34,7 +34,7 @@ requirements:
     - rapidfuzz
     - rich
     - scipy
-  
+
 test:
   imports:
     - chemex
